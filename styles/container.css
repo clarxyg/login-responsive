@@ -1,0 +1,201 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem; 
+    padding: 0 2rem;
+}
+
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img img {
+    width: 500px;
+    
+}
+
+.loginContainer {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: var(--card);
+    width: 29rem;
+    height: 35rem;
+    border-radius: 28px;
+    margin-top: 7.5rem;
+    margin-left: 5rem;
+}
+
+form {
+    width: 360px;
+}
+
+form h2 {
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: white;
+}
+
+.avatar {
+   width: 100px;
+  
+}
+
+.inputDiv {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+   
+}
+
+.inputDiv::after, .inputDiv::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 50%;
+    height: 2px;
+}
+
+.inputDiv.focus::after, .inputDiv.-focus::before {
+    width: 50%;
+}
+
+.inputDiv::after {
+    right: 50%;
+}
+
+.inputDiv::before {
+    left: 50%;
+}
+
+.inputDiv.focus > .i > i{
+	color: #837bfa;
+}
+
+.i{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i i{
+	transition: .3s;
+}
+
+
+.inputDiv.focus::placeholder > div{
+    top: -5px;
+    font-size: 1rem;
+}
+
+.inputDiv.one {
+    margin-bottom: 4px;
+}
+
+.inputDiv.two {
+    margin-bottom: 4px;
+}
+
+.inputDiv > div {
+    position: relative;
+    height: 45px;
+}
+
+.inputDiv::placeholder > div > input{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(167, 167, 167);
+    font-size: 15px;
+    transition: .3s;
+    
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+   
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    background: var(--button);
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: #3B30F5;
+}
+
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.loginContainer h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+        justify-content: center;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.loginContainer{
+		justify-content: center;
+        width: 28rem;
+        height: 70rem;
+    
+       
+        
+	}
+}
+
+
